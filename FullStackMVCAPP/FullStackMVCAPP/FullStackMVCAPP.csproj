@@ -135,6 +135,10 @@
     <Compile Include="Migrations\202108131308048_Add-Migration InitialSetUp.designer.cs">
       <DependentUpon>202108131308048_Add-Migration InitialSetUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108131350276_InitialSeed.cs" />
+    <Compile Include="Migrations\202108131350276_InitialSeed.designer.cs">
+      <DependentUpon>202108131350276_InitialSeed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Castle.cs" />
     <Compile Include="Models\House.cs" />
@@ -196,6 +200,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202108131308048_Add-Migration InitialSetUp.resx">
       <DependentUpon>202108131308048_Add-Migration InitialSetUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108131350276_InitialSeed.resx">
+      <DependentUpon>202108131350276_InitialSeed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
