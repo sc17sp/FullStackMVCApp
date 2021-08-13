@@ -6,7 +6,7 @@ using System.Web;
 
 namespace FullStackMVCAPP.Models
 {
-    public class Castles
+    public class Castle
     {
         public int Id { get; set; }
         [Required]

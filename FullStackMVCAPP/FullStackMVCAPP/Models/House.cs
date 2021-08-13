@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
 namespace FullStackMVCAPP.Models
 {
-    public class Houses
+    public class HouseContext : DbContext
+    { 
+        public DbSet<House> Houses { get; set; }
+    }
+    public class House
     {
         public int Id { get; set; }
         [Required]
@@ -15,6 +20,6 @@ namespace FullStackMVCAPP.Models
         public string Region { get; set; }
         public string Words { get; set; }
         [Required]
-        public virtual Castles castleId { get; set; }
+        public virtual Castle CastleId { get; set; }
     }
 }
