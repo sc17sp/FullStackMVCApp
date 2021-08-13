@@ -7,10 +7,6 @@ using System.Web;
 
 namespace FullStackMVCAPP.Models
 {
-    public class castleContext : DbContext
-    { 
-        public DbSet<Castle> Castles { get; set; }    
-    }
     public class Castle
     {
         public int Id { get; set; }

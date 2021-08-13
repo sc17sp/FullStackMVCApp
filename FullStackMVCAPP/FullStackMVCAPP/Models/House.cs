@@ -7,9 +7,10 @@ using System.Web;
 
 namespace FullStackMVCAPP.Models
 {
-    public class HouseContext : DbContext
+    public class GOTContext : DbContext
     { 
         public DbSet<House> Houses { get; set; }
+        public DbSet<Castle> Castles { get; set; }
     }
     public class House
     {
