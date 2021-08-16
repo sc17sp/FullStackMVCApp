@@ -30,6 +30,11 @@ namespace FullStackMVCAPP
                 url: "{controller}/{id}",
                 defaults: new { controller = "Castle", action ="Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Character",
+                url: "Character/{controller}/{id}",
+                defaults: new { controller = "Character", action = "HouseCharacterIndex"});
         }
     }
 }
