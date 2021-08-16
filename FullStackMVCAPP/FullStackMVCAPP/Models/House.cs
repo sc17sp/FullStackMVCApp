@@ -21,6 +21,6 @@ namespace FullStackMVCAPP.Models
         public string Region { get; set; }
         public string Words { get; set; }
         [Required]
-        public virtual Castle CastleId { get; set; }
+        public Castle CastleId { get; set; }
     }
 }
