@@ -144,8 +144,13 @@
     <Compile Include="Migrations\202108161032381_Using-Eager-Loading.Designer.cs">
       <DependentUpon>202108161032381_Using-Eager-Loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108161333328_AddCharacters.cs" />
+    <Compile Include="Migrations\202108161333328_AddCharacters.Designer.cs">
+      <DependentUpon>202108161333328_AddCharacters.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Castle.cs" />
+    <Compile Include="Models\Character.cs" />
     <Compile Include="Models\House.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108161032381_Using-Eager-Loading.resx">
       <DependentUpon>202108161032381_Using-Eager-Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108161333328_AddCharacters.resx">
+      <DependentUpon>202108161333328_AddCharacters.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

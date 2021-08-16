@@ -11,6 +11,7 @@ namespace FullStackMVCAPP.Models
     { 
         public DbSet<House> Houses { get; set; }
         public DbSet<Castle> Castles { get; set; }
+        public DbSet<Character> Characters { get; set; }
     }
     public class House
     {
