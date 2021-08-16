@@ -37,6 +37,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.CastleId.Name)
         </td>
+        <td>
+            <button type="sumbit" value="Characters" class="btn btn-default">@Html.ActionLink($"{item.Name} Characters",
+                                                                                              "HouseCharactersIndex",
+                                                                                              "Character",
+                                                                                              new { id = item.Id},
+                                                                                              null)
+            </button>
+        </td>
     </tr>
 }
 
