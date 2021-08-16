@@ -126,6 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CastleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HouseController.cs" />
     <Compile Include="Global.asax.cs">
@@ -139,6 +140,10 @@
     <Compile Include="Migrations\202108131350276_InitialSeed.designer.cs">
       <DependentUpon>202108131350276_InitialSeed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108161032381_Using-Eager-Loading.cs" />
+    <Compile Include="Migrations\202108161032381_Using-Eager-Loading.Designer.cs">
+      <DependentUpon>202108161032381_Using-Eager-Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Castle.cs" />
     <Compile Include="Models\House.cs" />
@@ -149,6 +154,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\GameOfThrones.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -181,6 +187,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\House\Index.cshtml" />
+    <Content Include="Views\Castle\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -204,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108131350276_InitialSeed.resx">
       <DependentUpon>202108131350276_InitialSeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108161032381_Using-Eager-Loading.resx">
+      <DependentUpon>202108161032381_Using-Eager-Loading.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
