@@ -23,7 +23,13 @@ namespace FullStackMVCAPP
                 name: "House",
                 url: "Houses/{id}",
                 defaults: new { controller = "House", action = "Index", id = UrlParameter.Optional }
-                );
+            );
+
+            routes.MapRoute(
+                name: "Castle",
+                url: "{controller}/{id}",
+                defaults: new { controller = "Castle", action ="Index", id = UrlParameter.Optional }
+            );
         }
     }
 }
