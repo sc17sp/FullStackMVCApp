@@ -71,6 +71,183 @@
                     CastleId = context.Castles.Find(5)
                 }
                 );
+            context.Characters.AddOrUpdate(x => x.Id,
+                new Models.Character() { 
+                    Id = 1,
+                    FirstName = "Jon",
+                    LastName = "Snow",
+                    Alive = true,
+                    HouseID = context.Houses.Find(4)
+                },
+                new Models.Character()
+                {
+                    Id = 2,
+                    FirstName = "Arya",
+                    LastName = "Stark",
+                    Alive = true,
+                    HouseID = context.Houses.Find(4)
+                },
+                new Models.Character()
+                {
+                    Id = 3,
+                    FirstName = "Sansa",
+                    LastName = "Stark",
+                    Alive = true,
+                    HouseID = context.Houses.Find(4)
+                },
+                new Models.Character()
+                {
+                    Id = 4,
+                    FirstName = "Eddard",
+                    LastName = "Stark",
+                    Alive = false,
+                    HouseID = context.Houses.Find(4)
+                },
+                new Models.Character()
+                {
+                    Id = 5,
+                    FirstName = "Bran",
+                    LastName = "Stark",
+                    Alive = true,
+                    HouseID = context.Houses.Find(4)
+                },
+                new Models.Character()
+                {
+                    Id = 6,
+                    FirstName = "Robb",
+                    LastName = "Stark",
+                    Alive = false,
+                    HouseID = context.Houses.Find(4)
+                },
+                new Models.Character()
+                {
+                    Id = 7,
+                    FirstName = "Catelyn",
+                    LastName = "Stark",
+                    Alive = false,
+                    HouseID = context.Houses.Find(4)
+                },
+                new Models.Character()
+                {
+                    Id = 8,
+                    FirstName = "Robin",
+                    LastName = "Arryn",
+                    Alive = true,
+                    HouseID = context.Houses.Find(1)
+                },
+                new Models.Character()
+                {
+                    Id = 9,
+                    FirstName = "Lysa",
+                    LastName = "Arryn",
+                    Alive = false,
+                    HouseID = context.Houses.Find(1)
+                },
+                new Models.Character()
+                {
+                    Id = 10,
+                    FirstName = "Yara",
+                    LastName = "Greyjoy",
+                    Alive = false,
+                    HouseID = context.Houses.Find(2)
+                },
+                new Models.Character()
+                {
+                    Id = 11,
+                    FirstName = "Theon",
+                    LastName = "Greyjoy",
+                    Alive = false,
+                    HouseID = context.Houses.Find(2)
+                },
+                new Models.Character()
+                {
+                    Id = 12,
+                    FirstName = "Balon",
+                    LastName = "Greyjoy",
+                    Alive = false,
+                    HouseID = context.Houses.Find(2)
+                },
+                new Models.Character()
+                {
+                    Id = 13,
+                    FirstName = "Cersei",
+                    LastName = "Lannister",
+                    Alive = false,
+                    HouseID = context.Houses.Find(3)
+                },
+                new Models.Character()
+                {
+                    Id = 14,
+                    FirstName = "Tyrion",
+                    LastName = "Lannister",
+                    Alive = true,
+                    HouseID = context.Houses.Find(3)
+                },
+                new Models.Character()
+                {
+                    Id = 15,
+                    FirstName = "Jamie",
+                    LastName = "Lannister",
+                    Alive = false,
+                    HouseID = context.Houses.Find(3)
+                },
+                new Models.Character()
+                {
+                    Id = 16,
+                    FirstName = "Tywin",
+                    LastName = "Lannister",
+                    Alive = false,
+                    HouseID = context.Houses.Find(3)
+                },
+                new Models.Character()
+                {
+                    Id = 17,
+                    FirstName = "Joffrey",
+                    LastName = "Lannister",
+                    Alive = false,
+                    HouseID = context.Houses.Find(3)
+                },
+                new Models.Character()
+                {
+                    Id = 18,
+                    FirstName = "Tommen",
+                    LastName = "Lannister",
+                    Alive = false,
+                    HouseID = context.Houses.Find(3)
+                },
+                new Models.Character()
+                {
+                    Id = 19,
+                    FirstName = "Daenerys",
+                    LastName = "Targaryen",
+                    Alive = false,
+                    HouseID = context.Houses.Find(5)
+                },
+                new Models.Character()
+                {
+                    Id = 20,
+                    FirstName = "Rhaegar",
+                    LastName = "Targaryen",
+                    Alive = false,
+                    HouseID = context.Houses.Find(5)
+                },
+                new Models.Character()
+                {
+                    Id = 21,
+                    FirstName = "Walder",
+                    LastName = "Frey",
+                    Alive = false,
+                    HouseID = context.Houses.Find(6)
+                },
+                new Models.Character()
+                {
+                    Id = 22,
+                    FirstName = "Walda",
+                    LastName = "Frey",
+                    Alive = false,
+                    HouseID = context.Houses.Find(6)
+                }
+            );
         }
     }
 }

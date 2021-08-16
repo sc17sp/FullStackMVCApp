@@ -148,6 +148,14 @@
     <Compile Include="Migrations\202108161333328_AddCharacters.Designer.cs">
       <DependentUpon>202108161333328_AddCharacters.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108161511424_PublicHouseID.cs" />
+    <Compile Include="Migrations\202108161511424_PublicHouseID.Designer.cs">
+      <DependentUpon>202108161511424_PublicHouseID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108161512150_PublicHouseID1.cs" />
+    <Compile Include="Migrations\202108161512150_PublicHouseID1.Designer.cs">
+      <DependentUpon>202108161512150_PublicHouseID1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Castle.cs" />
     <Compile Include="Models\Character.cs" />
@@ -223,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108161333328_AddCharacters.resx">
       <DependentUpon>202108161333328_AddCharacters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108161511424_PublicHouseID.resx">
+      <DependentUpon>202108161511424_PublicHouseID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108161512150_PublicHouseID1.resx">
+      <DependentUpon>202108161512150_PublicHouseID1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
