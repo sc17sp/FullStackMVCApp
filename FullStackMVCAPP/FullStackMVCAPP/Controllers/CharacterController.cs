@@ -10,7 +10,7 @@ namespace FullStackMVCAPP.Controllers
     public class CharacterController : Controller
     {
         // GET: Character
-        public ActionResult getHouseCharacters(int id)
+        public ActionResult HouseCharactersIndex(int id)
         {
             using (var db = new GOTContext()) 
             {
