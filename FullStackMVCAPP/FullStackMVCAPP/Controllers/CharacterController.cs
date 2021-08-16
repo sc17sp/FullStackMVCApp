@@ -15,6 +15,7 @@ namespace FullStackMVCAPP.Controllers
             using (var db = new GOTContext()) 
             {
                 var characterList = db.Characters.Where(chr => chr.HouseID.Id == id).ToList();
+                var house = db.Houses.Where(hos => hos.Id == id).ToList();
                 return View(characterList);
             }
         }

@@ -1,17 +1,17 @@
 ﻿@model IEnumerable<FullStackMVCAPP.Models.Character>
-
-
 @{
     ViewBag.Title = "HouseCharactersIndex";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>HouseCharactersIndex</h2>
+<h2>Characters of House @Model.Last().HouseID.Name</h2>
 
 <!--Razor loop passes each character from list to a new action link-->
 <!--Action Link take a character and renders a partial view that displays the character information-->
 
-@foreach (var item in Model)
+@if (Model != null)
 {
-    @Html.DisplayNameFor(item => item.FirstName);
+    foreach (var character in Model) { 
+        <p>@character.FirstName</p>
+    }
 }
