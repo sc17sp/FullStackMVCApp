@@ -1,6 +1,7 @@
 ﻿body {
     background-image: url("westeros.jpg");
     color: white;
+    font-family: Papyrus;
 }
 
 .jumbotron h1,
