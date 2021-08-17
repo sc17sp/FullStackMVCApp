@@ -3,15 +3,21 @@
     ViewBag.Title = "HouseCharactersIndex";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<link rel="stylesheet" type="text/css" href="~/Content/GameOfThrones.css" />
 <h2>Characters of House @Model.Last().HouseID.Name</h2>
 
 <!--Razor loop passes each character from list to a new action link-->
 <!--Action Link take a character and renders a partial view that displays the character information-->
-
+<div class="segment">
 @if (Model != null)
 {
-    foreach (var character in Model) { 
-        <p>@character.FirstName</p>
+    foreach (var character in Model)
+    {
+        <p>Name: @character.FirstName , @character.LastName</p>
+        <p>Alive: @character.Alive</p>
+        <br />
     }
 }
+
+
+</div>
