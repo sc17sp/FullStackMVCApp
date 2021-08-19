@@ -1,5 +1,8 @@
 ﻿using System;
 using FullStackMVCAPP.Repositories.Base;
+
+namespace FullStackMVCAPP.DataContext.Repositories.Base
+{
 public class EntityRepositories <T> : IEntityRepository <T> where T: class 
 {
     protected readonly GOTContext _GOTContext;
@@ -18,4 +21,5 @@ public class EntityRepositories <T> : IEntityRepository <T> where T: class
     {
         return _GOTContext.Set<T>.Where(ent => ent.Id == id);
     }
+}
 }

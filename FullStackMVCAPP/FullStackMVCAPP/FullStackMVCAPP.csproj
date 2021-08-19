@@ -132,6 +132,7 @@
     <Compile Include="Controllers\HouseController.cs" />
     <Compile Include="DataContext\GOTContext.cs" />
     <Compile Include="DataContext\Repositories\Base\EntityRepository.cs" />
+    <Compile Include="DataContext\Repositories\CharacterRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
