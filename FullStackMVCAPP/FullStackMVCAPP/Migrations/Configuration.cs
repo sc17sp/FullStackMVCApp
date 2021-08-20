@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<FullStackMVCAPP.Models.GOTContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<FullStackMVCAPP.DataContext.GOTContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(FullStackMVCAPP.Models.GOTContext context)
+        protected override void Seed(FullStackMVCAPP.DataContext.GOTContext context)
         {
             //  This method will be called after migrating to the latest version.
 

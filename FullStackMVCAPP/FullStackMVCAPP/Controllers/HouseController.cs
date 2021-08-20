@@ -12,15 +12,7 @@ namespace FullStackMVCAPP.Controllers
         // GET: House
         public ActionResult Index()
         {
-            using (var db = new GOTContext()) 
-            {
-                var housesList = db.Houses.ToList();
-                var castleList = db.Castles.ToList();
-
-
-                return View(housesList);
-
-            }
+            return View();
         }
 
         // GET: House/Details/5
