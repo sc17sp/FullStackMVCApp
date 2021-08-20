@@ -134,7 +134,7 @@
     <Compile Include="DataContext\GOTContext.cs" />
     <Compile Include="DataContext\Repositories\CastleRepository.cs" />
     <Compile Include="DataContext\Repositories\CharacterRepository.cs" />
-    <Compile Include="DataContext\Repositories\HouseRepositroy.cs" />
+    <Compile Include="DataContext\Repositories\HouseRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

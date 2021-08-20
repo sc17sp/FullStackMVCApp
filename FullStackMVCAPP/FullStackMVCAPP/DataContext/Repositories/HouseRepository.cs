@@ -6,7 +6,7 @@ using System.Web;
 
 namespace FullStackMVCAPP.DataContext.Repositories
 {
-    public class HouseRepositroy : IEntityRepository <FullStackMVCAPP.Models.House>
+    public class HouseRepository : IEntityRepository <FullStackMVCAPP.Models.House>
     {
         public IList<FullStackMVCAPP.Models.House> EntityList(GOTContext _GOTContext)
         {
