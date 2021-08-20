@@ -1,9 +1,12 @@
-﻿using System;
+﻿using FullStackMVCAPP.DataContext;
+using FullStackMVCAPP.Repositories.Base;
+using System;
+using System.Collections.Generic;
 
 namespace FullStackMVCAPP.Repositories
 {
 public interface ICharacterRepositry: IEntityRepository <FullStackMVCAPP.Models.Character>
 {
-    public IList<FullStackMVCAPP.Models.Character> GetCharacterByHouseId(int id);
+    IList<FullStackMVCAPP.Models.Character> GetCharacterByHouseId(GOTContext _GOTContext, int id);
 }
 }

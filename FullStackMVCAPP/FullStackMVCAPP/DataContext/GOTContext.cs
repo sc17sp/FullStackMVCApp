@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Data.Emtity;
+using System.Data.Entity;
 
 namespace FullStackMVCAPP.DataContext
 {
 public class GOTContext : DbContext 
 {
-	public GOTContext(DbContextOptions <GOTContext> options): base(options){}
 
     public DbSet<FullStackMVCAPP.Models.House> Houses { get; set; }
     public DbSet<FullStackMVCAPP.Models.Castle> Castles { get; set; }

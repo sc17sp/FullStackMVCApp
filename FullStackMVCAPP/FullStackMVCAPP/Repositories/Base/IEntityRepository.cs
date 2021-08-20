@@ -1,10 +1,12 @@
-﻿using System;
+﻿using FullStackMVCAPP.DataContext;
+using System;
+using System.Collections.Generic;
 
 namespace FullStackMVCAPP.Repositories.Base
 {
 public interface IEntityRepository<T> where T : class
 {
-    public IList<T> EntityList();
-    public T GetEntityByID(int id);
+    IList<T> EntityList(GOTContext gameOfThronesContext);
+    T GetEntityByID(GOTContext gameOfThronesContext,int id);
 }
 }
