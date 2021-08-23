@@ -11,13 +11,18 @@ using System.Web.Mvc;
 namespace FullStackMVCAPP.Controllers
 {
     public class CastleController : Controller
-    {
+    {   
+        protected readonly CastleService _CastleService;
+
+        public CastleController()
+        {
+            _CastleService = new CastleService();
+        }
         // GET: Castle
         public ActionResult Index()
         {
-           CastleService castleService = new CastleService();
-
-            return View(castleService.GetCastles());
+            var listOfCastles = _CastleService.GetCastles();
+            return View(listOfCastles);
         }
     }
 }
