@@ -15,9 +15,6 @@ namespace FullStackMVCAPP.Controllers
         // GET: House
         public ActionResult Index()
         {
-            /*GOTContext context = new DataContext.GOTContext();
-            HouseRepository houseRepository = new HouseRepository();*/
-
             HouseService houseService = new HouseService();
             return View(houseService.GetHouses());
         }

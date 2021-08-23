@@ -15,9 +15,6 @@ namespace FullStackMVCAPP.Controllers
         // GET: Character
         public ActionResult HouseCharactersIndex(int id)
         {
-            /*GOTContext context = new DataContext.GOTContext();
-            CharacterRepository characterRepository = new CharacterRepository();*/
-
             CharacterService characterService = new CharacterService();
 
             return View(characterService.GetCharacterByHouseId(id));
