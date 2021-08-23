@@ -16,7 +16,7 @@ namespace FullStackMVCAPP.DataContext.Repositories
 
         public House GetEntityByID(GOTContext _GOTContext, int id)
         {
-            return _GOTContext.Houses.Where(chr => chr.Id == id).First();
+            return _GOTContext.Houses.Single(chr => chr.Id == id);
         }
     }
 }
