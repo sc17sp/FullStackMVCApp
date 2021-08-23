@@ -8,7 +8,7 @@ namespace FullStackMVCAPP.DataContext.Repositories
 {
     public class CastleRepository
     {
-        public IList<Castle> EntityList(GOTContext _GOTContext)
+        public IEnumerable<Castle> EntityList(GOTContext _GOTContext)
         {
             return _GOTContext.Castles.ToList();
         }

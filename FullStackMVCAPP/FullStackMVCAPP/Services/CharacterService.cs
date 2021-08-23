@@ -18,7 +18,7 @@ namespace FullStackMVCAPP.Services
             _CharacterRepository = new CharacterRepository();
         }
 
-        public IList<Character> GetCharacters()
+        public IEnumerable<Character> GetCharacters()
         {
             return _CharacterRepository.EntityList(_GOTContext);    
         }
@@ -28,7 +28,7 @@ namespace FullStackMVCAPP.Services
             return _CharacterRepository.GetEntityByID(_GOTContext, id);
         }
 
-        public IList<Character> GetCharacterByHouseId(int id)
+        public IEnumerable<Character> GetCharacterByHouseId(int id)
         {
             return _CharacterRepository.GetCharacterByHouseId(_GOTContext, id);
         }

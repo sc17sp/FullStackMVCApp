@@ -8,6 +8,6 @@ namespace FullStackMVCAPP.Repositories
 {
 public interface ICharacterRepositry: IEntityRepository <Character>
 {
-    IList<Character> GetCharacterByHouseId(GOTContext _GOTContext, int id);
+    IEnumerable<Character> GetCharacterByHouseId(GOTContext _GOTContext, int id);
 }
 }

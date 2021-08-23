@@ -19,7 +19,7 @@ namespace FullStackMVCAPP.Services
             _HouseRepository = new HouseRepository();
         }
 
-        public IList<House> GetHouses()
+        public IEnumerable<House> GetHouses()
         {
             return _HouseRepository.EntityList(_GOTContext);
         }

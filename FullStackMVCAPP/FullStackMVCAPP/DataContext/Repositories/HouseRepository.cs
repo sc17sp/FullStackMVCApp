@@ -9,7 +9,7 @@ namespace FullStackMVCAPP.DataContext.Repositories
 {
     public class HouseRepository : IEntityRepository <House>
     {
-        public IList<House> EntityList(GOTContext _GOTContext)
+        public IEnumerable<House> EntityList(GOTContext _GOTContext)
         {
             return _GOTContext.Houses.ToList();
         }

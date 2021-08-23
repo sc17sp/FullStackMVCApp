@@ -19,7 +19,7 @@ namespace FullStackMVCAPP.Services
             _CastleRepository = new CastleRepository();
         }
 
-        public IList<Castle> GetCastles()
+        public IEnumerable<Castle> GetCastles()
         {
             return _CastleRepository.EntityList(_GOTContext);
         }
