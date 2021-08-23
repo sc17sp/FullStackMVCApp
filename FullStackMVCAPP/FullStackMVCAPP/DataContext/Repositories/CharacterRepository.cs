@@ -9,8 +9,6 @@ namespace FullStackMVCAPP.DataContext.Repositories
 {
     public class CharacterRepository: IEntityRepository<Character>, ICharacterRepositry
     {
-
-
         public IList<Character> EntityList(GOTContext _GOTContext)
         {
             return _GOTContext.Characters.ToList();
