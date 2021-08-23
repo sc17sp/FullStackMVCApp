@@ -162,6 +162,10 @@
     <Compile Include="Migrations\202108161512150_PublicHouseID1.Designer.cs">
       <DependentUpon>202108161512150_PublicHouseID1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108231025390_FixHouseId.cs" />
+    <Compile Include="Migrations\202108231025390_FixHouseId.Designer.cs">
+      <DependentUpon>202108231025390_FixHouseId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Castle.cs" />
     <Compile Include="Models\Character.cs" />
@@ -249,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108161512150_PublicHouseID1.resx">
       <DependentUpon>202108161512150_PublicHouseID1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108231025390_FixHouseId.resx">
+      <DependentUpon>202108231025390_FixHouseId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -24,7 +24,7 @@ namespace FullStackMVCAPP.DataContext.Repositories
         public IList<FullStackMVCAPP.Models.Character> GetCharacterByHouseId(GOTContext _GOTContext, int id)
         {
             var house = _GOTContext.Houses.Where(hos => hos.Id == id).First();
-            return _GOTContext.Characters.Where(chr => chr.HouseID.Id == house.Id).ToList();
+            return _GOTContext.Characters.Where(chr => chr.HouseId.Id == house.Id).ToList();
         }
     }
 }
