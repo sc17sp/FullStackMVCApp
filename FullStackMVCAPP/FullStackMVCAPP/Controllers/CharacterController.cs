@@ -10,14 +10,20 @@ using System.Web.Mvc;
 
 namespace FullStackMVCAPP.Controllers
 {
+
     public class CharacterController : Controller
     {
+        protected readonly CharacterService _CharacterService;
+
+        public CharacterController() 
+        {
+            _CharacterService = new CharacterService();
+        }
         // GET: Character
         public ActionResult HouseCharactersIndex(int id)
         {
-            CharacterService characterService = new CharacterService();
-
-            return View(characterService.GetCharacterByHouseId(id));
+            var characterByHouse = _CharacterService.GetCharacterByHouseId(id);
+            return View(characterByHouse);
         }
     }
 }

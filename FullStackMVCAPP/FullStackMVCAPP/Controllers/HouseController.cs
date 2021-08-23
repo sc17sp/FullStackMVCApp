@@ -12,11 +12,17 @@ namespace FullStackMVCAPP.Controllers
 {
     public class HouseController : Controller
     {
+        protected readonly HouseService _HouseService;
+
+        public HouseController() 
+        {
+            _HouseService = new HouseService();
+        }
         // GET: House
         public ActionResult Index()
         {
-            HouseService houseService = new HouseService();
-            return View(houseService.GetHouses());
+            var listOfHouses = _HouseService.GetHouses();
+            return View(listOfHouses);
         }
 
         // GET: House/Details/5
