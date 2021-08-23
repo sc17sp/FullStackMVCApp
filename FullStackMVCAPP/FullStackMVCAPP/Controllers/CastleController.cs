@@ -15,10 +15,10 @@ namespace FullStackMVCAPP.Controllers
         // GET: Castle
         public ActionResult Index()
         {
-            GOTContext  context = new DataContext.GOTContext();
-            CastleRepository castleRepository = new CastleRepository();
+           /* GOTContext  context = new DataContext.GOTContext();
+            CastleRepository castleRepository = new CastleRepository();*/
 
-            CastleService castleService = new CastleService(context, castleRepository);
+            CastleService castleService = new CastleService();
 
             return View(castleService.GetCastles());
         }

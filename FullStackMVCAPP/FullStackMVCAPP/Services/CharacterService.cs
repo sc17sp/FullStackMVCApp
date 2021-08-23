@@ -12,10 +12,10 @@ namespace FullStackMVCAPP.Services
         protected readonly GOTContext _GOTContext;
         protected readonly CharacterRepository _CharacterRepository;
 
-        public CharacterService(GOTContext gOTContext, CharacterRepository characterRepository)
+        public CharacterService()
         {
-            _GOTContext = gOTContext;
-            _CharacterRepository = characterRepository;
+            _GOTContext = new GOTContext();
+            _CharacterRepository = new CharacterRepository();
         }
 
         public IList<FullStackMVCAPP.Models.Character> GetCharacters()

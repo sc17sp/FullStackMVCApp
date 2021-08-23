@@ -12,10 +12,10 @@ namespace FullStackMVCAPP.Services
         protected readonly GOTContext _GOTContext;
         protected readonly CastleRepository _CastleRepository;
 
-        public CastleService(GOTContext gOTContext, CastleRepository castleRepository)
+        public CastleService()
         {
-            _GOTContext = gOTContext;
-            _CastleRepository = castleRepository;
+            _GOTContext = new DataContext.GOTContext();
+            _CastleRepository = new CastleRepository();
         }
 
         public IList<FullStackMVCAPP.Models.Castle> GetCastles()

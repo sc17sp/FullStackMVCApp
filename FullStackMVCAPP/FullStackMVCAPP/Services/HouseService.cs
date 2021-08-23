@@ -12,10 +12,10 @@ namespace FullStackMVCAPP.Services
         protected readonly GOTContext _GOTContext;
         protected readonly HouseRepository _HouseRepository;
 
-        public HouseService(GOTContext gOTContext, HouseRepository houseRepository)
+        public HouseService()
         {
-            _GOTContext = gOTContext;
-            _HouseRepository = houseRepository;
+            _GOTContext = new GOTContext();
+            _HouseRepository = new HouseRepository();
         }
 
         public IList<FullStackMVCAPP.Models.House> GetHouses()
