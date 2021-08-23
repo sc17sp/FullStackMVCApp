@@ -23,8 +23,9 @@ namespace FullStackMVCAPP.DataContext.Repositories
 
         public IList<FullStackMVCAPP.Models.Character> GetCharacterByHouseId(GOTContext _GOTContext, int id)
         {
+            // house used by cshtml to display house name at the top of page see HouseCharactersIndex.cshtml line 7
             var house = _GOTContext.Houses.Where(hos => hos.Id == id).First();
-            return _GOTContext.Characters.Where(chr => chr.HouseId.Id == house.Id).ToList();
+            return _GOTContext.Characters.Where(chr => chr.HouseId.Id == id).ToList();
         }
     }
 }
