@@ -176,6 +176,9 @@
     <Compile Include="Services\CastleService.cs" />
     <Compile Include="Services\CharacterService.cs" />
     <Compile Include="Services\HouseService.cs" />
+    <Compile Include="Services\Interfaces\ICastleService.cs" />
+    <Compile Include="Services\Interfaces\ICharacterService.cs" />
+    <Compile Include="Services\Interfaces\IHouseService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

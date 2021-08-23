@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using FullStackMVCAPP.Models;
+using FullStackMVCAPP.Services.Interfaces;
 
 namespace FullStackMVCAPP.Services
 {
-    public class CastleService
+    public class CastleService : ICastleService
     {
         protected readonly GOTContext _GOTContext;
         protected readonly CastleRepository _CastleRepository;

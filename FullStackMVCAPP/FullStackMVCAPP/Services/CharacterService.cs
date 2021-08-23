@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using FullStackMVCAPP.Models;
+using FullStackMVCAPP.Services.Interfaces;
+
 namespace FullStackMVCAPP.Services
 {
-    public class CharacterService
+    public class CharacterService : ICharacterService
     {
         protected readonly GOTContext _GOTContext;
         protected readonly CharacterRepository _CharacterRepository;
