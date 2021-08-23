@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using FullStackMVCAPP.Models;
 
 namespace FullStackMVCAPP.Services
 {
@@ -18,7 +19,7 @@ namespace FullStackMVCAPP.Services
             _HouseRepository = new HouseRepository();
         }
 
-        public IList<FullStackMVCAPP.Models.House> GetHouses()
+        public IList<House> GetHouses()
         {
             return _HouseRepository.EntityList(_GOTContext);
         }

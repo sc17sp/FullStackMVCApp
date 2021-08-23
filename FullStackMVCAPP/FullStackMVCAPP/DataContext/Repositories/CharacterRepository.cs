@@ -4,24 +4,24 @@ using System.Linq;
 using System.Web;
 using FullStackMVCAPP.Repositories;
 using FullStackMVCAPP.Repositories.Base;
-
+using FullStackMVCAPP.Models;
 namespace FullStackMVCAPP.DataContext.Repositories
 {
-    public class CharacterRepository: IEntityRepository<FullStackMVCAPP.Models.Character>, ICharacterRepositry
+    public class CharacterRepository: IEntityRepository<Character>, ICharacterRepositry
     {
 
 
-        public IList<FullStackMVCAPP.Models.Character> EntityList(GOTContext _GOTContext)
+        public IList<Character> EntityList(GOTContext _GOTContext)
         {
             return _GOTContext.Characters.ToList();
         }
 
-        public FullStackMVCAPP.Models.Character GetEntityByID(GOTContext _GOTContext, int id)
+        public Character GetEntityByID(GOTContext _GOTContext, int id)
         {
             return _GOTContext.Characters.Where(chr => chr.Id == id).First();
         }
 
-        public IList<FullStackMVCAPP.Models.Character> GetCharacterByHouseId(GOTContext _GOTContext, int id)
+        public IList<Character> GetCharacterByHouseId(GOTContext _GOTContext, int id)
         {
             // house used by cshtml to display house name at the top of page see HouseCharactersIndex.cshtml line 7
             var house = _GOTContext.Houses.Where(hos => hos.Id == id).First();

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using FullStackMVCAPP.Models;
 namespace FullStackMVCAPP.Services
 {
     public class CharacterService
@@ -18,17 +18,17 @@ namespace FullStackMVCAPP.Services
             _CharacterRepository = new CharacterRepository();
         }
 
-        public IList<FullStackMVCAPP.Models.Character> GetCharacters()
+        public IList<Character> GetCharacters()
         {
             return _CharacterRepository.EntityList(_GOTContext);    
         }
 
-        public FullStackMVCAPP.Models.Character GetCharacterById(int id)
+        public Character GetCharacterById(int id)
         {
             return _CharacterRepository.GetEntityByID(_GOTContext, id);
         }
 
-        public IList<FullStackMVCAPP.Models.Character> GetCharacterByHouseId(int id)
+        public IList<Character> GetCharacterByHouseId(int id)
         {
             return _CharacterRepository.GetCharacterByHouseId(_GOTContext, id);
         }
