@@ -12,7 +12,7 @@ namespace FullStackMVCAPP.Controllers
 {
     public class CastleController : Controller
     {   
-        protected readonly CastleService _CastleService;
+        private readonly CastleService _CastleService;
 
         public CastleController()
         {

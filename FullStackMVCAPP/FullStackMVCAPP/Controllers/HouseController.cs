@@ -12,7 +12,7 @@ namespace FullStackMVCAPP.Controllers
 {
     public class HouseController : Controller
     {
-        protected readonly HouseService _HouseService;
+        private readonly HouseService _HouseService;
 
         public HouseController() 
         {

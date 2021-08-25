@@ -13,7 +13,7 @@ namespace FullStackMVCAPP.Controllers
 
     public class CharacterController : Controller
     {
-        protected readonly CharacterService _CharacterService;
+        private readonly CharacterService _CharacterService;
 
         public CharacterController() 
         {
