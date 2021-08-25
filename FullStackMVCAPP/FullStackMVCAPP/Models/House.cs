@@ -17,5 +17,7 @@ namespace FullStackMVCAPP.Models
         public string Words { get; set; }
         [Required]
         public Castle CastleId { get; set; }
+         
+        public virtual ICollection<Character> Characters { get; set; }
     }
 }

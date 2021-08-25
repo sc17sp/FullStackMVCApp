@@ -1,6 +1,8 @@
 ﻿namespace FullStackMVCAPP.Migrations
 {
+    using FullStackMVCAPP.Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -33,42 +35,48 @@
                     Name = "Arryn",
                     Region = "The Vale of Arryn",
                     Words = "As High as Honor",
-                    CastleId = context.Castles.Find(4) 
+                    CastleId = context.Castles.Find(4),
+                    Characters = new List<Character>()
                 },
                 new Models.House() {
                     Id = 2,
                     Name = "Greyjoy",
                     Region = "Iron Islands",
                     Words = "What is Dead May Never Die",
-                    CastleId = context.Castles.Find(2) 
+                    CastleId = context.Castles.Find(2),
+                    Characters = new List<Character>()
                 },
                 new Models.House() {
                     Id = 3,
                     Name = "Lannister",
                     Region = "The Western Islands",
                     Words = "A Lannister Always Pays His Debts",
-                    CastleId = context.Castles.Find(3)
+                    CastleId = context.Castles.Find(3),
+                    Characters = new List<Character>()
                 },
                 new Models.House() { 
                     Id = 4,
                     Name = "Stark",
                     Region = "The North",
                     Words = "Winter is Coming",
-                    CastleId = context.Castles.Find(1)
+                    CastleId = context.Castles.Find(1),
+                    Characters = new List<Character>()
                 },
                 new Models.House() { 
                     Id = 5,
                     Name = "Targaryen",
                     Region = "The Crownlands",
                     Words = "Fire and Blood",
-                    CastleId = context.Castles.Find(6)
+                    CastleId = context.Castles.Find(6),
+                    Characters = new List<Character>()
                 },
                 new Models.House() { 
                     Id = 6,
                     Name = "Frey",
                     Region = "The Riverlands",
                     Words = "We Stand together",
-                    CastleId = context.Castles.Find(5)
+                    CastleId = context.Castles.Find(5),
+                    Characters = new List<Character>()
                 }
                 );
             context.Characters.AddOrUpdate(x => x.Id,
@@ -248,6 +256,62 @@
                     HouseId = context.Houses.Find(6)
                 }
             );
+
+            //adding characters to their houses
+
+            //Stark
+            context.Houses.Find(1).Characters.Add(context.Characters.Find(1));
+            context.Houses.Find(1).Characters.Add(context.Characters.Find(2));
+            context.Houses.Find(1).Characters.Add(context.Characters.Find(3));
+            context.Houses.Find(1).Characters.Add(context.Characters.Find(4));
+            context.Houses.Find(1).Characters.Add(context.Characters.Find(5));
+            context.Houses.Find(1).Characters.Add(context.Characters.Find(6));
+            context.Houses.Find(1).Characters.Add(context.Characters.Find(7));
+
+            //Arryn
+            context.Houses.Find(2).Characters.Add(context.Characters.Find(8));
+            context.Houses.Find(1).Characters.Add(context.Characters.Find(9));
+
+            //Greyjoy
+            context.Houses.Find(3).Characters.Add(context.Characters.Find(10));
+            context.Houses.Find(3).Characters.Add(context.Characters.Find(11));
+            context.Houses.Find(3).Characters.Add(context.Characters.Find(12));
+
+            //Lannister
+            context.Houses.Find(4).Characters.Add(context.Characters.Find(13));
+            context.Houses.Find(4).Characters.Add(context.Characters.Find(14));
+            context.Houses.Find(4).Characters.Add(context.Characters.Find(15));
+            context.Houses.Find(4).Characters.Add(context.Characters.Find(16));
+            context.Houses.Find(4).Characters.Add(context.Characters.Find(17));
+
+            //Targaryen
+            context.Houses.Find(5).Characters.Add(context.Characters.Find(18));
+            context.Houses.Find(5).Characters.Add(context.Characters.Find(19));
+
+            //Frey
+            context.Houses.Find(6).Characters.Add(context.Characters.Find(20));
+            context.Houses.Find(6).Characters.Add(context.Characters.Find(21));
+
+            //Adding castles to houses
+            //The Eyrie
+            //context.Castles.Find(1).HouseId = context.Houses.Find(4);
+
+            //Pyke
+            //context.Castles.Find(2).HouseId = context.Houses.Find(2);
+
+            //Casterly Rock
+            //context.Castles.Find(3).HouseId = context.Houses.Find(3);
+
+            //Winterfell
+            //context.Castles.Find(4).HouseId = context.Houses.Find(1);
+
+            //The Twins
+            //context.Castles.Find(5).HouseId = context.Houses.Find(6);
+
+            //DragonStone
+            //context.Castles.Find(6).HouseId = context.Houses.Find(5);
+
+            context.SaveChanges();
         }
     }
 }
