@@ -294,22 +294,22 @@
 
             //Adding castles to houses
             //The Eyrie
-            //context.Castles.Find(1).HouseId = context.Houses.Find(4);
+            context.Castles.Find(1).HouseId = context.Houses.Find(4);
 
             //Pyke
-            //context.Castles.Find(2).HouseId = context.Houses.Find(2);
+            context.Castles.Find(2).HouseId = context.Houses.Find(2);
 
             //Casterly Rock
-            //context.Castles.Find(3).HouseId = context.Houses.Find(3);
+            context.Castles.Find(3).HouseId = context.Houses.Find(3);
 
             //Winterfell
-            //context.Castles.Find(4).HouseId = context.Houses.Find(1);
+            context.Castles.Find(4).HouseId = context.Houses.Find(1);
 
             //The Twins
-            //context.Castles.Find(5).HouseId = context.Houses.Find(6);
+            context.Castles.Find(5).HouseId = context.Houses.Find(6);
 
             //DragonStone
-            //context.Castles.Find(6).HouseId = context.Houses.Find(5);
+            context.Castles.Find(6).HouseId = context.Houses.Find(5);
 
             context.SaveChanges();
         }
