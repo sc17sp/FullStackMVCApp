@@ -1,4 +1,4 @@
-﻿namespace FullStackMVCAPP.Migrations
+namespace FullStackMVCAPP.Migrations
 {
     using FullStackMVCAPP.Models;
     using System;
@@ -30,62 +30,69 @@
                 );
 
             context.Houses.AddOrUpdate(x => x.Id,
-                new Models.House() {
+                new Models.House()
+                {
                     Id = 1,
                     Name = "Arryn",
                     Region = "The Vale of Arryn",
                     Words = "As High as Honor",
-                    CastleId = context.Castles.Find(4),
+                    Castle = context.Castles.Find(4),
                     Characters = new List<Character>()
                 },
-                new Models.House() {
+                new Models.House()
+                {
                     Id = 2,
                     Name = "Greyjoy",
                     Region = "Iron Islands",
                     Words = "What is Dead May Never Die",
-                    CastleId = context.Castles.Find(2),
+                    Castle = context.Castles.Find(2),
                     Characters = new List<Character>()
                 },
-                new Models.House() {
+                new Models.House()
+                {
                     Id = 3,
                     Name = "Lannister",
                     Region = "The Western Islands",
                     Words = "A Lannister Always Pays His Debts",
-                    CastleId = context.Castles.Find(3),
+                    Castle = context.Castles.Find(3),
                     Characters = new List<Character>()
                 },
-                new Models.House() { 
+                new Models.House()
+                {
                     Id = 4,
                     Name = "Stark",
                     Region = "The North",
                     Words = "Winter is Coming",
-                    CastleId = context.Castles.Find(1),
+                    Castle = context.Castles.Find(1),
                     Characters = new List<Character>()
                 },
-                new Models.House() { 
+                new Models.House()
+                {
                     Id = 5,
                     Name = "Targaryen",
                     Region = "The Crownlands",
                     Words = "Fire and Blood",
-                    CastleId = context.Castles.Find(6),
+                    Castle = context.Castles.Find(6),
                     Characters = new List<Character>()
                 },
-                new Models.House() { 
+                new Models.House()
+                {
                     Id = 6,
                     Name = "Frey",
                     Region = "The Riverlands",
                     Words = "We Stand together",
-                    CastleId = context.Castles.Find(5),
+                    Castle = context.Castles.Find(5),
                     Characters = new List<Character>()
                 }
                 );
             context.Characters.AddOrUpdate(x => x.Id,
-                new Models.Character() { 
+                new Models.Character()
+                {
                     Id = 1,
                     FirstName = "Jon",
                     LastName = "Snow",
                     Alive = true,
-                    HouseId = context.Houses.Find(4)
+                    House = context.Houses.Find(4)
                 },
                 new Models.Character()
                 {
@@ -93,7 +100,7 @@
                     FirstName = "Arya",
                     LastName = "Stark",
                     Alive = true,
-                    HouseId = context.Houses.Find(4)
+                    House = context.Houses.Find(4)
                 },
                 new Models.Character()
                 {
@@ -101,7 +108,7 @@
                     FirstName = "Sansa",
                     LastName = "Stark",
                     Alive = true,
-                    HouseId = context.Houses.Find(4)
+                    House = context.Houses.Find(4)
                 },
                 new Models.Character()
                 {
@@ -109,7 +116,7 @@
                     FirstName = "Eddard",
                     LastName = "Stark",
                     Alive = false,
-                    HouseId = context.Houses.Find(4)
+                    House = context.Houses.Find(4)
                 },
                 new Models.Character()
                 {
@@ -117,7 +124,7 @@
                     FirstName = "Bran",
                     LastName = "Stark",
                     Alive = true,
-                    HouseId = context.Houses.Find(4)
+                    House = context.Houses.Find(4)
                 },
                 new Models.Character()
                 {
@@ -125,7 +132,7 @@
                     FirstName = "Robb",
                     LastName = "Stark",
                     Alive = false,
-                    HouseId = context.Houses.Find(4)
+                    House = context.Houses.Find(4)
                 },
                 new Models.Character()
                 {
@@ -133,7 +140,7 @@
                     FirstName = "Catelyn",
                     LastName = "Stark",
                     Alive = false,
-                    HouseId = context.Houses.Find(4)
+                    House = context.Houses.Find(4)
                 },
                 new Models.Character()
                 {
@@ -141,7 +148,7 @@
                     FirstName = "Robin",
                     LastName = "Arryn",
                     Alive = true,
-                    HouseId = context.Houses.Find(1)
+                    House = context.Houses.Find(1)
                 },
                 new Models.Character()
                 {
@@ -149,7 +156,7 @@
                     FirstName = "Lysa",
                     LastName = "Arryn",
                     Alive = false,
-                    HouseId = context.Houses.Find(1)
+                    House = context.Houses.Find(1)
                 },
                 new Models.Character()
                 {
@@ -157,7 +164,7 @@
                     FirstName = "Yara",
                     LastName = "Greyjoy",
                     Alive = false,
-                    HouseId = context.Houses.Find(2)
+                    House = context.Houses.Find(2)
                 },
                 new Models.Character()
                 {
@@ -165,7 +172,7 @@
                     FirstName = "Theon",
                     LastName = "Greyjoy",
                     Alive = false,
-                    HouseId = context.Houses.Find(2)
+                    House = context.Houses.Find(2)
                 },
                 new Models.Character()
                 {
@@ -173,7 +180,7 @@
                     FirstName = "Balon",
                     LastName = "Greyjoy",
                     Alive = false,
-                    HouseId = context.Houses.Find(2)
+                    House = context.Houses.Find(2)
                 },
                 new Models.Character()
                 {
@@ -181,7 +188,7 @@
                     FirstName = "Cersei",
                     LastName = "Lannister",
                     Alive = false,
-                    HouseId = context.Houses.Find(3)
+                    House = context.Houses.Find(3)
                 },
                 new Models.Character()
                 {
@@ -189,7 +196,7 @@
                     FirstName = "Tyrion",
                     LastName = "Lannister",
                     Alive = true,
-                    HouseId = context.Houses.Find(3)
+                    House = context.Houses.Find(3)
                 },
                 new Models.Character()
                 {
@@ -197,7 +204,7 @@
                     FirstName = "Jamie",
                     LastName = "Lannister",
                     Alive = false,
-                    HouseId = context.Houses.Find(3)
+                    House = context.Houses.Find(3)
                 },
                 new Models.Character()
                 {
@@ -205,7 +212,7 @@
                     FirstName = "Tywin",
                     LastName = "Lannister",
                     Alive = false,
-                    HouseId = context.Houses.Find(3)
+                    House = context.Houses.Find(3)
                 },
                 new Models.Character()
                 {
@@ -213,7 +220,7 @@
                     FirstName = "Joffrey",
                     LastName = "Lannister",
                     Alive = false,
-                    HouseId = context.Houses.Find(3)
+                    House = context.Houses.Find(3)
                 },
                 new Models.Character()
                 {
@@ -221,7 +228,7 @@
                     FirstName = "Tommen",
                     LastName = "Lannister",
                     Alive = false,
-                    HouseId = context.Houses.Find(3)
+                    House = context.Houses.Find(3)
                 },
                 new Models.Character()
                 {
@@ -229,7 +236,7 @@
                     FirstName = "Daenerys",
                     LastName = "Targaryen",
                     Alive = false,
-                    HouseId = context.Houses.Find(5)
+                    House = context.Houses.Find(5)
                 },
                 new Models.Character()
                 {
@@ -237,7 +244,7 @@
                     FirstName = "Rhaegar",
                     LastName = "Targaryen",
                     Alive = false,
-                    HouseId = context.Houses.Find(5)
+                    House = context.Houses.Find(5)
                 },
                 new Models.Character()
                 {
@@ -245,7 +252,7 @@
                     FirstName = "Walder",
                     LastName = "Frey",
                     Alive = false,
-                    HouseId = context.Houses.Find(6)
+                    House = context.Houses.Find(6)
                 },
                 new Models.Character()
                 {
@@ -253,7 +260,7 @@
                     FirstName = "Walda",
                     LastName = "Frey",
                     Alive = false,
-                    HouseId = context.Houses.Find(6)
+                    House = context.Houses.Find(6)
                 }
             );
 
@@ -294,22 +301,22 @@
 
             //Adding castles to houses
             //The Eyrie
-            context.Castles.Find(1).HouseId = context.Houses.Find(4);
+            context.Castles.Find(1).House = context.Houses.Find(4);
 
             //Pyke
-            context.Castles.Find(2).HouseId = context.Houses.Find(2);
+            context.Castles.Find(2).House = context.Houses.Find(2);
 
             //Casterly Rock
-            context.Castles.Find(3).HouseId = context.Houses.Find(3);
+            context.Castles.Find(3).House = context.Houses.Find(3);
 
             //Winterfell
-            context.Castles.Find(4).HouseId = context.Houses.Find(1);
+            context.Castles.Find(4).House = context.Houses.Find(1);
 
             //The Twins
-            context.Castles.Find(5).HouseId = context.Houses.Find(6);
+            context.Castles.Find(5).House = context.Houses.Find(6);
 
             //DragonStone
-            context.Castles.Find(6).HouseId = context.Houses.Find(5);
+            context.Castles.Find(6).House = context.Houses.Find(5);
 
             context.SaveChanges();
         }

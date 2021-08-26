@@ -138,37 +138,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108131308048_Add-Migration InitialSetUp.cs" />
-    <Compile Include="Migrations\202108131308048_Add-Migration InitialSetUp.designer.cs">
-      <DependentUpon>202108131308048_Add-Migration InitialSetUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108131350276_InitialSeed.cs" />
-    <Compile Include="Migrations\202108131350276_InitialSeed.designer.cs">
-      <DependentUpon>202108131350276_InitialSeed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108161032381_Using-Eager-Loading.cs" />
-    <Compile Include="Migrations\202108161032381_Using-Eager-Loading.Designer.cs">
-      <DependentUpon>202108161032381_Using-Eager-Loading.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108161333328_AddCharacters.cs" />
-    <Compile Include="Migrations\202108161333328_AddCharacters.Designer.cs">
-      <DependentUpon>202108161333328_AddCharacters.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108161511424_PublicHouseID.cs" />
-    <Compile Include="Migrations\202108161511424_PublicHouseID.Designer.cs">
-      <DependentUpon>202108161511424_PublicHouseID.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108161512150_PublicHouseID1.cs" />
-    <Compile Include="Migrations\202108161512150_PublicHouseID1.Designer.cs">
-      <DependentUpon>202108161512150_PublicHouseID1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108231025390_FixHouseId.cs" />
-    <Compile Include="Migrations\202108231025390_FixHouseId.Designer.cs">
-      <DependentUpon>202108231025390_FixHouseId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108251506249_Blah.cs" />
-    <Compile Include="Migrations\202108251506249_Blah.Designer.cs">
-      <DependentUpon>202108251506249_Blah.cs</DependentUpon>
+    <Compile Include="Migrations\202108260928537_InitialModel.cs" />
+    <Compile Include="Migrations\202108260928537_InitialModel.Designer.cs">
+      <DependentUpon>202108260928537_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Castle.cs" />
@@ -244,29 +216,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202108131308048_Add-Migration InitialSetUp.resx">
-      <DependentUpon>202108131308048_Add-Migration InitialSetUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108131350276_InitialSeed.resx">
-      <DependentUpon>202108131350276_InitialSeed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108161032381_Using-Eager-Loading.resx">
-      <DependentUpon>202108161032381_Using-Eager-Loading.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108161333328_AddCharacters.resx">
-      <DependentUpon>202108161333328_AddCharacters.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108161511424_PublicHouseID.resx">
-      <DependentUpon>202108161511424_PublicHouseID.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108161512150_PublicHouseID1.resx">
-      <DependentUpon>202108161512150_PublicHouseID1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108231025390_FixHouseId.resx">
-      <DependentUpon>202108231025390_FixHouseId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108251506249_Blah.resx">
-      <DependentUpon>202108251506249_Blah.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202108260928537_InitialModel.resx">
+      <DependentUpon>202108260928537_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

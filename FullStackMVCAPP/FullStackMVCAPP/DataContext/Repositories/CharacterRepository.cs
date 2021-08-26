@@ -23,7 +23,7 @@ namespace FullStackMVCAPP.DataContext.Repositories
         {
             // house used by cshtml to display house name at the top of page see HouseCharactersIndex.cshtml line 7
             var house = _GOTContext.Houses.Where(hos => hos.Id == id).First();
-            return _GOTContext.Characters.Where(chr => chr.HouseId.Id == id).ToList();
+            return _GOTContext.Characters.Where(chr => chr.House.Id == id).ToList();
         }
     }
 }

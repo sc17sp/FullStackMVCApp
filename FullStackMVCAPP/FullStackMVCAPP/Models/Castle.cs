@@ -12,6 +12,6 @@ namespace FullStackMVCAPP.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public House HouseId { get; set; }
+        public House House { get; set; }
     }
 }

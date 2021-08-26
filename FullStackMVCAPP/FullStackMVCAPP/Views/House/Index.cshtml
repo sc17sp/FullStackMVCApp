@@ -19,7 +19,7 @@
             @Html.DisplayNameFor(model => model.Words)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CastleId)
+            @Html.DisplayNameFor(model => model.Castle)
         </th>
     </tr>
 
@@ -35,7 +35,7 @@
             @Html.DisplayFor(modelItem => item.Words)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CastleId.Name)
+            @Html.DisplayFor(modelItem => item.Castle.Name)
         </td>
         <td>
             <button type="sumbit" value="Characters" class="btn btn-default">@Html.ActionLink($"{item.Name} Characters",
