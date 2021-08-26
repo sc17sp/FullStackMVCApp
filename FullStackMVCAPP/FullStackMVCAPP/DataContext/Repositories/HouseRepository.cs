@@ -11,11 +11,12 @@ namespace FullStackMVCAPP.DataContext.Repositories
     {
         public IEnumerable<House> EntityList(GOTContext _GOTContext)
         {
+            var castles = _GOTContext.Castles.ToList();
             return _GOTContext.Houses.ToList();
         }
 
         public House GetEntityByID(GOTContext _GOTContext, int id)
-        {
+        {   
             return _GOTContext.Houses.Single(chr => chr.Id == id);
         }
     }
