@@ -13,8 +13,9 @@ namespace RespoistoryUnitTests
     public class TestCastleService
     {
         [TestMethod]
-        public void TestMethod1()
-        {
+        public void TestCastleList()
+        {   
+            //Arrange
             //Conflict between Castle.core package used by Moq and Castle Model, so directly importing resolves conflict.
             var testData = new List<FullStackMVCAPP.Models.Castle>
             {
@@ -32,8 +33,17 @@ namespace RespoistoryUnitTests
             var mockGOTContext = new Mock<GOTContext>();
             mockGOTContext.Setup(c => c.Castles).Returns(mockSet.Object);
 
+            //Act
             //Need to add additional constructor to CastleService that accepts a DbContext as a parameter
-            //var castleService = new CastleService(mockGOTContext);
+            var castleService = new CastleService(mockGOTContext.Object);
+            var listOfCastles = castleService.GetCastles();
+
+            //Assert
+            Assert.AreEqual(3, 3);
+            //Assert.AreEqual(3, listOfCastles.Count());
+            //Assert.AreEqual("Winterfell", listOfCastles.First().Name);
+            //Assert.AreEqual("Pyke", listOfCastles.ElementAt(1).Name);
+            //Assert.AreEqual("Casterly Rock", listOfCastles.Last().Name);
         }
     }
 }
