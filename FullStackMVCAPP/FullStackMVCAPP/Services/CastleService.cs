@@ -17,6 +17,12 @@ namespace FullStackMVCAPP.Services
             _GOTContext = new DataContext.GOTContext();
             _CastleRepository = new CastleRepository();
         }
+
+        public CastleService(GOTContext gOTContext)
+        {
+            _GOTContext = gOTContext;
+            _CastleRepository = new CastleRepository();
+        }
         //Conflic between Castle.core package used by Moq and Castle Model, so directly importing resolves conflict.
         public IEnumerable<Models.Castle> GetCastles()
         {
