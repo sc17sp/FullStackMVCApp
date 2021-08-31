@@ -39,11 +39,11 @@ namespace RespoistoryUnitTests
             var listOfCastles = castleService.GetCastles();
 
             //Assert
-            Assert.AreEqual(3, 3);
-            //Assert.AreEqual(3, listOfCastles.Count());
-            //Assert.AreEqual("Winterfell", listOfCastles.First().Name);
-            //Assert.AreEqual("Pyke", listOfCastles.ElementAt(1).Name);
-            //Assert.AreEqual("Casterly Rock", listOfCastles.Last().Name);
+            //Assert.AreEqual(3, 3);
+            Assert.AreEqual(3, listOfCastles.Count());
+            Assert.AreEqual("Winterfell", listOfCastles.First().Name);
+            Assert.AreEqual("Pyke", listOfCastles.ElementAt(1).Name);
+            Assert.AreEqual("Casterly Rock", listOfCastles.Last().Name);
         }
     }
 }
