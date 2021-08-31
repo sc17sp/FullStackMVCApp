@@ -7,6 +7,7 @@ namespace FullStackMVCAPP.DataContext.Repositories
 {
     public class CastleRepository
     {
+        //Conflic between Castle.core package used by Moq and Castle Model, so directly importing resolves conflict.
         public IEnumerable<Models.Castle> EntityList(GOTContext _GOTContext)
         {
             return _GOTContext.Castles.ToList();
