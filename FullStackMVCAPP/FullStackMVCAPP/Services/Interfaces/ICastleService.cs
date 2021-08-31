@@ -9,6 +9,6 @@ namespace FullStackMVCAPP.Services.Interfaces
 {
     interface ICastleService
     {
-        IEnumerable<Castle> GetCastles();
+        IEnumerable<Models.Castle> GetCastles();
     }
 }

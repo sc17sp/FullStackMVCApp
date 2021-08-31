@@ -2,9 +2,7 @@
 using FullStackMVCAPP.DataContext.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using FullStackMVCAPP.Models;
 using FullStackMVCAPP.Services.Interfaces;
 
 namespace FullStackMVCAPP.Services
@@ -20,7 +18,7 @@ namespace FullStackMVCAPP.Services
             _CastleRepository = new CastleRepository();
         }
 
-        public IEnumerable<Castle> GetCastles()
+        public IEnumerable<Models.Castle> GetCastles()
         {
             return _CastleRepository.EntityList(_GOTContext);
         }
