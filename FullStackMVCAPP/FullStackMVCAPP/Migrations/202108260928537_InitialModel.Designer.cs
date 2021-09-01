@@ -7,13 +7,13 @@ namespace FullStackMVCAPP.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class PublicHouseID1 : IMigrationMetadata
+    public sealed partial class InitialModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(PublicHouseID1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "202108161512150_PublicHouseID1"; }
+            get { return "202108260928537_InitialModel"; }
         }
         
         string IMigrationMetadata.Source

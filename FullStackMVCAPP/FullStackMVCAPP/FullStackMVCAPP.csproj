@@ -18,7 +18,8 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44312</IISExpressSSLPort>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -130,38 +131,30 @@
     <Compile Include="Controllers\CharacterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HouseController.cs" />
+    <Compile Include="DataContext\GOTContext.cs" />
+    <Compile Include="DataContext\Repositories\CastleRepository.cs" />
+    <Compile Include="DataContext\Repositories\CharacterRepository.cs" />
+    <Compile Include="DataContext\Repositories\HouseRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108131308048_Add-Migration InitialSetUp.cs" />
-    <Compile Include="Migrations\202108131308048_Add-Migration InitialSetUp.designer.cs">
-      <DependentUpon>202108131308048_Add-Migration InitialSetUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108131350276_InitialSeed.cs" />
-    <Compile Include="Migrations\202108131350276_InitialSeed.designer.cs">
-      <DependentUpon>202108131350276_InitialSeed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108161032381_Using-Eager-Loading.cs" />
-    <Compile Include="Migrations\202108161032381_Using-Eager-Loading.Designer.cs">
-      <DependentUpon>202108161032381_Using-Eager-Loading.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108161333328_AddCharacters.cs" />
-    <Compile Include="Migrations\202108161333328_AddCharacters.Designer.cs">
-      <DependentUpon>202108161333328_AddCharacters.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108161511424_PublicHouseID.cs" />
-    <Compile Include="Migrations\202108161511424_PublicHouseID.Designer.cs">
-      <DependentUpon>202108161511424_PublicHouseID.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108161512150_PublicHouseID1.cs" />
-    <Compile Include="Migrations\202108161512150_PublicHouseID1.Designer.cs">
-      <DependentUpon>202108161512150_PublicHouseID1.cs</DependentUpon>
+    <Compile Include="Migrations\202108260928537_InitialModel.cs" />
+    <Compile Include="Migrations\202108260928537_InitialModel.Designer.cs">
+      <DependentUpon>202108260928537_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Castle.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\House.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Base\IEntityRepository.cs" />
+    <Compile Include="Repositories\ICharacterRepository.cs" />
+    <Compile Include="Services\CastleService.cs" />
+    <Compile Include="Services\CharacterService.cs" />
+    <Compile Include="Services\HouseService.cs" />
+    <Compile Include="Services\Interfaces\ICastleService.cs" />
+    <Compile Include="Services\Interfaces\ICharacterService.cs" />
+    <Compile Include="Services\Interfaces\IHouseService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -207,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="UnitTests\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -222,23 +216,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202108131308048_Add-Migration InitialSetUp.resx">
-      <DependentUpon>202108131308048_Add-Migration InitialSetUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108131350276_InitialSeed.resx">
-      <DependentUpon>202108131350276_InitialSeed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108161032381_Using-Eager-Loading.resx">
-      <DependentUpon>202108161032381_Using-Eager-Loading.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108161333328_AddCharacters.resx">
-      <DependentUpon>202108161333328_AddCharacters.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108161511424_PublicHouseID.resx">
-      <DependentUpon>202108161511424_PublicHouseID.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108161512150_PublicHouseID1.resx">
-      <DependentUpon>202108161512150_PublicHouseID1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202108260928537_InitialModel.resx">
+      <DependentUpon>202108260928537_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -259,7 +238,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58986</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44312/</IISUrl>
+          <IISUrl>http://localhost:58986/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,4 +1,7 @@
-﻿using FullStackMVCAPP.Models;
+﻿using FullStackMVCAPP.DataContext;
+using FullStackMVCAPP.DataContext.Repositories;
+using FullStackMVCAPP.Models;
+using FullStackMVCAPP.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +12,17 @@ namespace FullStackMVCAPP.Controllers
 {
     public class HouseController : Controller
     {
+        private readonly HouseService _HouseService;
+
+        public HouseController() 
+        {
+            _HouseService = new HouseService();
+        }
         // GET: House
         public ActionResult Index()
         {
-            using (var db = new GOTContext()) 
-            {
-                var housesList = db.Houses.ToList();
-                var castleList = db.Castles.ToList();
-
-
-                return View(housesList);
-
-            }
+            var listOfHouses = _HouseService.GetHouses();
+            return View(listOfHouses);
         }
 
         // GET: House/Details/5

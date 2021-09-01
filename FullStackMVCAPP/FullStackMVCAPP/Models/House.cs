@@ -7,12 +7,6 @@ using System.Web;
 
 namespace FullStackMVCAPP.Models
 {
-    public class GOTContext : DbContext
-    { 
-        public DbSet<House> Houses { get; set; }
-        public DbSet<Castle> Castles { get; set; }
-        public DbSet<Character> Characters { get; set; }
-    }
     public class House
     {
         public int Id { get; set; }
@@ -22,6 +16,8 @@ namespace FullStackMVCAPP.Models
         public string Region { get; set; }
         public string Words { get; set; }
         [Required]
-        public Castle CastleId { get; set; }
+        public Castle Castle { get; set; }
+         
+        public virtual ICollection<Character> Characters { get; set; }
     }
 }
