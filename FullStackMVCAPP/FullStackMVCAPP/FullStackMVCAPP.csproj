@@ -159,6 +159,10 @@
     <Compile Include="Migrations\202108311337474_VirtualCastleDbContext.designer.cs">
       <DependentUpon>202108311337474_VirtualCastleDbContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108311613186_VirtualGOTContext.cs" />
+    <Compile Include="Migrations\202108311613186_VirtualGOTContext.designer.cs">
+      <DependentUpon>202108311613186_VirtualGOTContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Castle.cs" />
     <Compile Include="Models\Character.cs" />
@@ -237,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108311337474_VirtualCastleDbContext.resx">
       <DependentUpon>202108311337474_VirtualCastleDbContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108311613186_VirtualGOTContext.resx">
+      <DependentUpon>202108311613186_VirtualGOTContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

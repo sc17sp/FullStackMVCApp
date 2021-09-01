@@ -20,10 +20,10 @@ namespace FullStackMVCAPP.Services
             _HouseRepository = new HouseRepository();
         }
 
-        public HouseService(GOTContext gOTContext, HouseRepository houseRepository)
+        public HouseService(GOTContext gOTContext)
         {
             _GOTContext = gOTContext;
-            _HouseRepository = houseRepository;
+            _HouseRepository = new HouseRepository();
         }
 
         public IEnumerable<House> GetHouses()
