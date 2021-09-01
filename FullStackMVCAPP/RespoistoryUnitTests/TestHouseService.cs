@@ -53,6 +53,7 @@ namespace RespoistoryUnitTests
             var houseService = new HouseService(mockContext.Object);
             var listOfHouses = houseService.GetHouses();
 
+            //Assert
             Assert.AreEqual(3, listOfHouses.Count());
             Assert.AreEqual("Stark", listOfHouses.First().Name);
             Assert.AreEqual("Lannister", listOfHouses.ElementAt(1).Name);
