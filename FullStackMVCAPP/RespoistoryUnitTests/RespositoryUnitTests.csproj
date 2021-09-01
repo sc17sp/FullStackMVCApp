@@ -75,6 +75,7 @@
     <Compile Include="TestHouseService.cs" />
     <Compile Include="TestCharacterService.cs" />
     <Compile Include="TestHouseRepository.cs" />
+    <Compile Include="TestCastleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
