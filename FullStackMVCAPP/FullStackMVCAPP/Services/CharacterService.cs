@@ -20,6 +20,12 @@ namespace FullStackMVCAPP.Services
             _CharacterRepository = new CharacterRepository();
         }
 
+        public CharacterService(GOTContext gOTContext)
+        {
+            _GOTContext = gOTContext;
+            _CharacterRepository = new CharacterRepository();
+        }
+
         public IEnumerable<Character> GetCharacters()
         {
             return _CharacterRepository.EntityList(_GOTContext);    
