@@ -299,25 +299,6 @@ namespace FullStackMVCAPP.Migrations
             context.Houses.Find(6).Characters.Add(context.Characters.Find(20));
             context.Houses.Find(6).Characters.Add(context.Characters.Find(21));
 
-            //Adding castles to houses
-            ////The Eyrie
-            //context.Castles.Find(1).House = context.Houses.Find(4);
-
-            ////Pyke
-            //context.Castles.Find(2).House = context.Houses.Find(2);
-
-            ////Casterly Rock
-            //context.Castles.Find(3).House = context.Houses.Find(3);
-
-            ////Winterfell
-            //context.Castles.Find(4).House = context.Houses.Find(1);
-
-            ////The Twins
-            //context.Castles.Find(5).House = context.Houses.Find(6);
-
-            ////DragonStone
-            //context.Castles.Find(6).House = context.Houses.Find(5);
-
             context.SaveChanges();
         }
     }
